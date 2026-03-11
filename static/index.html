@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MNIST Digit Recognizer</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="card left">
+        <h1>Draw a Digit</h1>
+        <p>
+          Draw a number on the board. The model predicts what you wrote and
+          shows confidence for digits <strong>0-9</strong>.
+        </p>
+
+        <canvas id="drawBoard" width="280" height="280"></canvas>
+
+        <div class="controls">
+          <button id="predictBtn">Predict</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+
+        <p id="status" class="status">Model ready.</p>
+      </section>
+
+      <section class="card right">
+        <h2>Prediction</h2>
+        <div class="result">
+          <span id="predDigit">-</span>
+          <small id="predConfidence">Confidence: -</small>
+        </div>
+        <div id="bars" class="bars"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
